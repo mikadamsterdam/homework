@@ -15,10 +15,16 @@
 <br>
 <br>
 
+<p class="navigation">
+   <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+   <span class="btn btn-default"><%= link_to "Edit song", edit_song_path(song)%></span>
+   <span class="btn btn-default"><%= link_to "Destroy song", song_path(song), method: :delete %></span>
+ </p>
+
 <% end %>
 
 <p class="navigation">
    <span class="btn btn-default"><%= link_to "Back", root_path %></span>
-   <span class="btn btn-default"><%= link_to "Edit", edit_artist_path(@artist) %></span>
-   <span class="btn btn-default"><%= link_to "Destroy", artist_path(@artist), method: :delete %></span>
+   <span class="btn btn-default"><%= link_to "Edit artist", edit_artist_path(@artist) %></span>
+   <span class="btn btn-default"><%= link_to "Destroy artist", artist_path(@artist), method: :delete %></span>
  </p>
