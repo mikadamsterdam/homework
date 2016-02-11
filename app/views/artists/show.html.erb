@@ -16,3 +16,9 @@
 <br>
 
 <% end %>
+
+<p class="navigation">
+   <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+   <span class="btn btn-default"><%= link_to "Edit", edit_artist_path(@artist) %></span>
+   <span class="btn btn-default"><%= link_to "Destroy", artist_path(@artist), method: :delete %></span>
+ </p>
