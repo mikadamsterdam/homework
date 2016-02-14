@@ -1,6 +1,7 @@
 
 
 <%= @artist.name %>
+<br>
 <%= @artist.birth_date %> 
 
 
@@ -18,9 +19,9 @@
 <%= @artist.songs.each do |song| %>
 
 
-			<h4> <%= song.title %></h4>
-			<h4> <%= song.release_date %></h4>
-			<h4> <%= song.album %></h4>
+			<h4> Title of the song: <%= song.title %></h4>
+			<h4> Date: <%= song.release_date %></h4>
+			<h4> Album name: <%= song.album %></h4>
 
 
 

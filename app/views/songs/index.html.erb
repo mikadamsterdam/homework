@@ -1,8 +1,9 @@
+<div class="row">
+
 <% @songs.each do |song| %>
 
-<div class="table">
-	<div class="row">
-			<div class="col-md-8 l-main">
+	
+			<div class="col-xs-12 col-sm-6 col-md-3 box highlight"> 
 			<h4> <%= link_to song.title , song %></h4>
 			<h4> <%= song.release_date %></h4>
 			<h4> <%= song.album %></h4>
@@ -15,7 +16,8 @@
  <br>
 <br>
 <br>
-
+</div>
 <% end %>
+</div>
 
 
