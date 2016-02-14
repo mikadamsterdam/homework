@@ -1,7 +1,19 @@
 <h1>Edit artist</h1>
 
 
-<%= render "artist" %>
+<%= form_for(@artist) do |f| %>
+ 
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+
+    <%= f.label :birth_date %>
+    <%= f.text_field :birth_date %>
+
+
+    <%= f.submit "Save artist" %>
+
+    <% end %>
 
 
 
