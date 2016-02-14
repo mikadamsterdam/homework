@@ -1,16 +1,14 @@
+<h4> <%= link_to artist.name , artist %></h4>
+<h4> <%= artist.birth_date %></h4>
 
 
-<%= form_for(@artist) do |f| %>
- 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+<p class="navigation">
+   <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+   <span class="btn btn-default"><%= link_to "Edit", edit_artist_path(artist)%></span>
+   <span class="btn btn-default"><%= link_to "Destroy", artist_path(artist), method: :delete %></span>
+ </p>
+ <br>
 
 
-    <%= f.label :birth_date %>
-    <%= f.text_field :birth_date %>
 
-
-    <%= f.submit "Save artist" %>
-
-    <% end %>
 

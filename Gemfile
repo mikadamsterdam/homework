@@ -49,5 +49,7 @@ group :development do
   gem 'devise', '3.4.1'
   gem 'bootstrap-sass'
 
+  #gem 'sprockets-rails', :require => 'sprockets/railtie'
+
 end
 

@@ -1,14 +1,27 @@
 
 
 <%= @artist.name %>
+<br>
+<%= @artist.birth_date %> 
+
+
+<p class="navigation">
+   <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+   <span class="btn btn-default"><%= link_to "Edit artist", edit_artist_path(@artist)%></span>
+   <span class="btn btn-default"><%= link_to "Destroy artist", artist_path(@artist), method: :delete %></span>
+ </p>
+
+<br>
+<br>
+<br>
 
 
 <%= @artist.songs.each do |song| %>
 
 
-			<h4> <%= song.title %></h4>
-			<h4> <%= song.release_date %></h4>
-			<h4> <%= song.album %></h4>
+			<h4> Title of the song: <%= song.title %></h4>
+			<h4> Date: <%= song.release_date %></h4>
+			<h4> Album name: <%= song.album %></h4>
 
 
 
