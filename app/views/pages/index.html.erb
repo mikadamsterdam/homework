@@ -1,0 +1,23 @@
+
+  <div class="jumbotron">
+    <div class="container">
+
+    
+
+
+<% if user_signed_in? %>
+        <li>Now you can check our database regarding music </li>
+        <li><%= link_to "Songs ", songs_path%></li>
+        <li><%= link_to "Artists", artists_path%></li>
+        <% else %>
+          <li>Please login first </li>
+         <% end %>
+
+
+  
+
+   
+
+    </div>
+  </div>
+

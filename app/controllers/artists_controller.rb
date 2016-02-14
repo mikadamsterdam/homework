@@ -1,8 +1,5 @@
 class ArtistsController < ApplicationController
 
-  def edit
-
-  end
 
  def index
    @artists = Artist.all
@@ -20,6 +17,21 @@ end
     end
       end
 
+  def edit
+   @artist = Artist.find(params[:id])
+  end
+
+  def update
+    @artist = Artist.find(params[:id])
+
+    if @artist.update(artist_params)
+      redirect_to @artist
+    else
+      render :edit
+    end
+  end
+
+
   def show
     @artist = Artist.find(params[:id])
      @songs = @artist.songs
@@ -32,6 +44,16 @@ end
     else
       redirect_to @artist
     end
+  end
+
+
+
+private
+
+  def artist_params
+    params.require(:artist).permit(
+      :name , :birth_date
+    )
   end
 
  end

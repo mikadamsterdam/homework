@@ -39,8 +39,18 @@ thriller = Song.create({
   album: "Thriller", artist_id: mj.id
   })
 
-bad = Song.create({title: "Bad", release_date: Date.parse( "1987-08-31"), album: "Bad", artist_id: mj.id })
+bad = Song.create({
+  title: "Bad", release_date: Date.parse( "1987-08-31"), album: "Bad", 
+  artist_id: mj.id 
+  })
 
-man_down = Song.create({ title: "Man down", release_date: Date.parse( "2010-01-01"), album: "Loud", artist_id: rihanna.id })
+man_down = Song.create({ 
+  title: "Man down", release_date: Date.parse( "2010-01-01"), 
+  album: "Loud", 
+  artist_id: rihanna.id 
+  })
 
-three_little_birds = Song.create({ title: "three little birds", release_date: Date.parse( "1977-01-01"), album: "Exodus", artist_id: marley.id})
+three_little_birds = Song.create({ title: "three little birds", 
+  release_date: Date.parse( "1977-01-01"), 
+  album: "Exodus", 
+  artist_id: marley.id})

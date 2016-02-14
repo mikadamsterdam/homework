@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
-  get 'artists/edit'
 
-  get 'artists/edit'
-
-  get 'artists_controller/edit'
+  devise_for :users
+  root to: 'pages#index'
+ # get 'artists/edit'
+ # get 'pages/edit'
+ # get 'artists_controller/edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'artists#index'
+  #root 'artists#index'
   resources :artists
   resources :songs
+  resources :pages
+  resources :devise
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -20,6 +24,8 @@ Rails.application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
+  default_url_options :host => '127.0.0.1',  port: 3000
+  
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
