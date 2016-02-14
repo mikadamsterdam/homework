@@ -1,10 +1,12 @@
 class ArtistsController < ApplicationController
 
-  def index
-    @artists = Artist.all
+  def edit
+
   end
-  
-    
+
+ def index
+   @artists = Artist.all
+end
 
    def new
     @artist = Artist.new
@@ -19,9 +21,9 @@ class ArtistsController < ApplicationController
       end
 
   def show
-    	@artist = Artist.find(params[:id])
-      @songs = @artist.songs
-  	end
+    @artist = Artist.find(params[:id])
+     @songs = @artist.songs
+  end
 
   def destroy
     @artist = Artist.find(params[:id])
@@ -32,4 +34,4 @@ class ArtistsController < ApplicationController
     end
   end
 
-end
+ end

@@ -6,11 +6,13 @@
 			<h4> <%= link_to song.title , song %></h4>
 			<h4> <%= song.release_date %></h4>
 			<h4> <%= song.album %></h4>
-			<h4> <%= song.artist.name %></h4>			
 
-
-
-<br>
+<p class="navigation">
+   <span class="btn btn-default"><%= link_to "Back", root_path %></span>
+   <span class="btn btn-default"><%= link_to "Edit", edit_song_path(song)%></span>
+   <span class="btn btn-default"><%= link_to "Destroy", song_path(song), method: :delete %></span>
+ </p>
+ <br>
 <br>
 <br>
 
