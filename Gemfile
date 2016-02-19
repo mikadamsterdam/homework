@@ -48,8 +48,11 @@ group :development do
 
   gem 'devise', '3.4.1'
   gem 'bootstrap-sass'
+  gem 'spring-commands-rspec'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+
 
   #gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 end
-

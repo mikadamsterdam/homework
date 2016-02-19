@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+ # get 'image/index'
+ # get 'image/new'
+ # get 'image/create'
+ # get 'image/destroy'
+
   devise_for :users
   root to: 'pages#index'
  # get 'artists/edit'
@@ -17,6 +22,8 @@ Rails.application.routes.draw do
   resources :pages
   resources :devise
   resources :users
+  resources :image
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
